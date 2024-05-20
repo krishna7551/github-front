@@ -10,13 +10,12 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // GitHub App details
-const appId = '';
-const pemPath = '';
+const appId = process.env.APP_ID;
+const pemPath = process.env.PEM_PATH;
 const privateKey = fs.readFileSync(pemPath);
 
 // Front app details
-const frontToken = '';//add front token
-const frontChannelId = '';//add front channel id
+const frontToken = process.env.FRONT_TOKEN;//add front token
 
 let owner = '';
 let repo = '';
@@ -118,7 +117,7 @@ async function createFrontConversation(issueDetails) {
 
     const config = {
         method: 'post',
-        url: ``,//Add frontapp incoming endpoint
+        url: process.env.URL,
         headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json',
@@ -193,7 +192,7 @@ async function addCommentToFrontapp(issueNumber, comment) {
 
     const config = {
         method: 'post',
-        url: ``,//Add frontapp incoming endpoint
+        url: process.env.URL,
         headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json',
@@ -272,8 +271,6 @@ async function associateTagLinkWithConversation(conversationId, linkId) {
         throw error;
     }
 }
-
-
 
 async function generateJWT() {
     const payload = {
