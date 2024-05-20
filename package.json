@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "@octokit/auth-app": "^7.1.0",
+    "@octokit/core": "^6.1.2",
+    "@octokit/rest": "^20.1.1",
+    "axios": "^1.6.8",
+    "dotenv": "^16.4.5",
+    "esm": "^3.2.25",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "name": "github-front",
+  "version": "1.0.0",
+  "main": "github.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
