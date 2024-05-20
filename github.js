@@ -10,13 +10,13 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // GitHub App details
-const appId = '899029';
-const pemPath = 'C:\\Users\\saich\\Downloads\\kc7551.2024-05-15.private-key.pem';
+const appId = '';
+const pemPath = '';
 const privateKey = fs.readFileSync(pemPath);
 
 // Front app details
-const frontToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzY29wZXMiOlsicHJvdmlzaW9uaW5nIiwicHJpdmF0ZToqIiwic2hhcmVkOioiLCJrYiJdLCJpYXQiOjE3MTU4NTE1NjIsImlzcyI6ImZyb250Iiwic3ViIjoiY2E2MjkxZjZiMDVlMmJlZjEzOWMiLCJqdGkiOiJjMjBhY2U0ZDNiNzAwZTg5In0.prI-tKEEmkc1upSmQ85oQKVi5WazyM62I8bNPp7RGis';
-const frontChannelId = 'cha_gl40s';
+const frontToken = '';//add front token
+const frontChannelId = '';//add front channel id
 
 let owner = '';
 let repo = '';
@@ -118,7 +118,7 @@ async function createFrontConversation(issueDetails) {
 
     const config = {
         method: 'post',
-        url: `https://p1.api.frontapp.com/channels/cha_gl40s/incoming_messages`,
+        url: ``,//Add frontapp incoming endpoint
         headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json',
@@ -193,7 +193,7 @@ async function addCommentToFrontapp(issueNumber, comment) {
 
     const config = {
         method: 'post',
-        url: `https://citrix.api.frontapp.com/channels/${frontChannelId}/incoming_messages`,
+        url: ``,//Add frontapp incoming endpoint
         headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json',
